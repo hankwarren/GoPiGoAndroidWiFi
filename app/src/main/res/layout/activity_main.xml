@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.kgdsoftware.gopigo.MainActivity">
+
+    <Button
+        android:text="Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/left_button"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/right_button"
+        android:onClick="rightClick" />
+
+    <Button
+        android:text="Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/stop_button"
+        android:onClick="stopClick"
+        android:layout_above="@+id/rotate_left_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/backwardButton"
+        android:onClick="backwardClick"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Rotate Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rotate_left_button"
+        android:onClick="rotateLeftClick"
+        android:layout_below="@+id/left_button"
+        android:layout_alignStart="@+id/left_button" />
+
+    <Button
+        android:text="Rotate Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rotate_right_button"
+        android:onClick="rotateRightClick"
+        android:layout_below="@+id/right_button"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Look Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_below="@+id/rotate_right_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/rotate_right_button"
+        android:onClick="lookRightClick" />
+
+    <Button
+        android:text="Look Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:onClick="lookLeftClick"
+        android:layout_below="@+id/rotate_left_button"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/rotate_left_button" />
+
+    <Button
+        android:text="Left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/left_button"
+        android:onClick="leftClick"
+        android:layout_below="@+id/button"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:onClick="forwardClick"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/rotate_left_button"
+        android:layout_alignParentStart="true" />
+
+    <SeekBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:id="@+id/speedBar"
+        android:progressDrawable="@drawable/seekbar"
+        android:thumb="@drawable/knob_9"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:max="255" />
+
+    <com.kgdsoftware.gopigo.TouchPad
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/touch_pad"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/increase_button" />
+
+    <TextView
+        android:text="100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/speedView"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_alignBaseline="@+id/increase_button"
+        android:layout_alignBottom="@+id/increase_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:onClick="homeClick"
+        android:layout_above="@+id/speedBar"
+        android:layout_alignStart="@+id/stop_button" />
+
+    <Button
+        android:text="+"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/increase_button"
+        android:layout_below="@+id/speedBar"
+        android:layout_alignParentEnd="true"
+        android:onClick="increaseClick" />
+
+    <Button
+        android:text="-"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/decrease_button"
+        android:layout_below="@+id/speedBar"
+        android:layout_alignEnd="@+id/left_button"
+        android:layout_marginEnd="12dp"
+        android:onClick="decreaseClick" />
+
+</RelativeLayout>
